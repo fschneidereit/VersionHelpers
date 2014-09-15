@@ -2,8 +2,8 @@
 Copyright &copy; 2014 Florian Schneidereit. All rights reserved.  
 Licensed and distributed under the terms of the MIT license.
 
-[Official Website](http://versionhelpers.flatcode.net "Official Website")  
-[Official NuGet Package](http://nuget.org/flatcode/VersionHelpers "Official NuGet Package")
+[Official Website](http://github.com/flatcode/VersionHelpers "Official Website")  
+[Official NuGet Package](http://nuget.org/packages/VersionHelpers "Official NuGet Package")
 
 ## Introduction ##
 The Managed Version Helpers Library is a free and open source .NET assembly that provides a managed implementation of the native [Version Helper functions](http://msdn.microsoft.com/library/windows/desktop/dn424972.aspx "Version Helper functions") found in the Microsoft Windows&reg; SDK.
