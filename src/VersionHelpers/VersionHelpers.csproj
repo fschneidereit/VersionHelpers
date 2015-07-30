@@ -15,17 +15,6 @@
     <OutputPath>..\..\bin\$(Configuration)</OutputPath>
     <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_net20|AnyCPU'">
-    <AssemblyOriginatorKeyFile>..\..\snk\VersionHelpers.pub</AssemblyOriginatorKeyFile>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DelaySign>true</DelaySign>
-    <ErrorReport>prompt</ErrorReport>
-    <Optimize>false</Optimize>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_net40|AnyCPU'">
     <AssemblyOriginatorKeyFile>..\..\snk\VersionHelpers.pub</AssemblyOriginatorKeyFile>
     <DebugSymbols>true</DebugSymbols>
@@ -48,15 +37,6 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Publish_net20|AnyCPU'">
-    <AssemblyOriginatorKeyFile>..\..\snk\VersionHelpers.snk</AssemblyOriginatorKeyFile>
-    <DebugType>none</DebugType>
-    <DefineConstants>TRACE;PUBLISH</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <Optimize>true</Optimize>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Publish_net40|AnyCPU'">
     <AssemblyOriginatorKeyFile>..\..\snk\VersionHelpers.snk</AssemblyOriginatorKeyFile>
     <DebugType>none</DebugType>
@@ -73,16 +53,6 @@
     <ErrorReport>prompt</ErrorReport>
     <Optimize>true</Optimize>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_net20|AnyCPU'">
-    <AssemblyOriginatorKeyFile>..\..\snk\VersionHelpers.pub</AssemblyOriginatorKeyFile>
-    <DebugType>pdbonly</DebugType>
-    <DefineConstants>TRACE</DefineConstants>
-    <DelaySign>true</DelaySign>
-    <ErrorReport>prompt</ErrorReport>
-    <Optimize>true</Optimize>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_net40|AnyCPU'">

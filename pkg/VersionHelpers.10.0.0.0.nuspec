@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>VersionHelpers</id>
+        <version>10.0.0.0</version>
+        <title>Managed Version Helpers Library</title>
+        <authors>Flatcode.net</authors>
+        <owners>flatcode</owners>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>http://github.com/flatcode/VersionHelpers</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This package consists of a library that provides a managed implementation of the native Version Helper functions as defined in the VersionHelpers.h header included in the Windows® 10 SDK.
+
+You can refer to the official MSDN documentation on how to use these APIs, or the documentation found on the project's website.</description>
+        <summary>Provides a managed implementation of the native Version Helper functions to determine the current Windows® version or identify whether it is a client or server release.</summary>
+        <releaseNotes>This release covers all Windows® versions from XP to 10 and contains assemblies for the .NET Framework 4.0 and 4.5. Support for ealier versions of .NET Framework has been dropped.</releaseNotes>
+        <copyright>© 2014-2015 Flatcode.net</copyright>
+        <tags>Win32, Windows, Version Helpers</tags>
+    </metadata>
+    <files>
+        <file src="..\bin\Publish_net40\License.txt" target="lib\net40\License.txt" />
+        <file src="..\bin\Publish_net40\VersionHelpers.dll" target="lib\net40\VersionHelpers.dll" />
+        <file src="..\bin\Publish_net40\VersionHelpers.xml" target="lib\net40\VersionHelpers.xml" />
+        <file src="..\bin\Publish_net45\License.txt" target="lib\net45\License.txt" />
+        <file src="..\bin\Publish_net45\VersionHelpers.dll" target="lib\net45\VersionHelpers.dll" />
+        <file src="..\bin\Publish_net45\VersionHelpers.xml" target="lib\net45\VersionHelpers.xml" />
+    </files>
+</package>

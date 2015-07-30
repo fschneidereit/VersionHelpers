@@ -1,7 +1,6 @@
 ﻿/***************************************************************************************************
  *
- *  Managed Version Helpers Library
- *  Copyright © 2014 Florian Schneidereit. All rights reserved.
+ *  Copyright © 2014-2015 Flatcode.net
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  *  and associated documentation files (the "Software"), to deal in the Software without
@@ -34,7 +33,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("VersionHelpers-DLL")]
 [assembly: AssemblyCompany("Flatcode.net")]
 [assembly: AssemblyProduct("Managed Version Helpers Library")]
-[assembly: AssemblyCopyright("Copyright © 2014 Flatcode.net")]
+[assembly: AssemblyCopyright("Copyright © 2014-2015 Flatcode.net")]
 
 #endregion
 
@@ -54,7 +53,7 @@ using System.Runtime.InteropServices;
 
 #region Attributes: Versioning
 
-[assembly: AssemblyVersion("6.3.0.0")]
-[assembly: AssemblyFileVersion("6.3")]
+[assembly: AssemblyVersion("10.0.0.0")]
+[assembly: AssemblyFileVersion("10.0")]
 
 #endregion

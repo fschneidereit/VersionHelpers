@@ -1,7 +1,6 @@
 ﻿/***************************************************************************************************
  *
- *  Managed Version Helpers Library
- *  Copyright © 2014 Florian Schneidereit. All rights reserved.
+ *  Copyright © 2014-2015 Flatcode.net
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  *  and associated documentation files (the "Software"), to deal in the Software without
@@ -55,6 +54,7 @@ namespace System.Windows
 		static readonly Boolean windows7SP1OrGreater;
 		static readonly Boolean windows8OrGreater;
 		static readonly Boolean windows8Point1OrGreater;
+        static readonly Boolean windows10OrGreater;
 		static readonly Boolean windowsServer;
 
 		#endregion
@@ -63,9 +63,15 @@ namespace System.Windows
 
 		static VersionHelpers()
 		{
-			// Static initialization in reverse order from newest to oldest OS version to ensure
-			// IsWindowsVersionOrGreater() is only called until a match is found.
-			windows8Point1OrGreater = IsWindowsVersionOrGreater(6, 3, 0);
+            // Static initialization in reverse order from newest to oldest OS version to ensure
+            // IsWindowsVersionOrGreater() is only called until a match is found.
+            windows10OrGreater = IsWindowsVersionOrGreater(10, 0, 0);
+
+            if (!windows10OrGreater) {
+                windows8Point1OrGreater = IsWindowsVersionOrGreater(6, 3, 0);
+            } else {
+                windows8Point1OrGreater = true;
+            }
 
 			if (!windows8Point1OrGreater) {
 				windows8OrGreater = IsWindowsVersionOrGreater(6, 2, 0);
@@ -348,6 +354,20 @@ namespace System.Windows
 			return windows8Point1OrGreater;
 		}
 
+        /// <summary>
+		/// Indicates if the current OS version matches, or is greater than, the Windows 10
+		/// version.
+		/// </summary>
+		///  <returns>True if the current OS version matches, or is greater than, the Windows 10
+		/// version; otherwise, false.</returns>
+		#if AGGRESSIVE_INLINING
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		#endif
+		public static Boolean IsWindows10OrGreater()
+		{
+			return windows10OrGreater;
+		}
+
 		/// <summary>
 		/// Indicates if the current OS is a Windows Server release. Applications that need to
 		/// distinguish between server and client versions of Windows should call this method.
@@ -424,9 +444,9 @@ namespace System.Windows
 		#region P/Invoke: Methods
 
 		[DllImport("Kernel32.dll",
-					   CallingConvention = CallingConvention.Winapi,
-					   CharSet = CharSet.Unicode,
-					   SetLastError = true)]
+                   CallingConvention = CallingConvention.Winapi,
+				   CharSet = CharSet.Unicode,
+                   SetLastError = true)]
 		[SuppressUnmanagedCodeSecurity]
 		[return: MarshalAs(UnmanagedType.Bool)]
 		static extern Boolean VerifyVersionInfo(
