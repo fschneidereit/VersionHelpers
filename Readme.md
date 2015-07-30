@@ -1,5 +1,5 @@
 # Managed Version Helpers Library #
-Copyright &copy; 2014 Florian Schneidereit. All rights reserved.  
+Copyright &copy; 2014-2015 Flatcode.net  
 Licensed and distributed under the terms of the MIT license.
 
 [Official Website](http://github.com/flatcode/VersionHelpers "Official Website")  
@@ -26,7 +26,7 @@ Besides the traditional *Debug* and *Release* project configurations, there is a
 Please note that the *Publish* project configuration requires a valid strong-name keyfile named `VersionHelpers.snk` to be present in the `snk` directory; otherwise, the build process will fail. **The official strong-name keyfile is not part of this repository!** You have to provide your own public/private keypair for your (inofficial) redistributable assembly.
 
 #### Target Frameworks ###
-Every configuration supports v2.0, v4.0, and v4.5 as target framework version.
+Every configuration supports v4.0 and v4.5 as target framework version. Support for v2.0 has been dropped with the Windows 10 release.
 
 ## Usage ##
 Example C# code:
